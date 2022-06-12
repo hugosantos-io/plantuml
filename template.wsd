@@ -1,0 +1,189 @@
+@startuml Company PlantUML C4 Template
+' Documentation: https://github.com/plantuml-stdlib/C4-PlantUML
+' Examples https://github.com/plantuml-stdlib/C4-PlantUML/blob/master/samples/C4CoreDiagrams.md
+' !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Dynamic.puml
+
+' System Configs
+AddElementTag("t1", $legendText="T1 - Tier 1 System", $bgColor="#F4CCD2", $borderColor="#B7B5BA", $fontColor="#390008")
+AddElementTag("t2", $legendText="T2 - Tier 2 System", $bgColor="#FDFACE", $borderColor="#B7B5BA", $fontColor="#312E02")
+AddElementTag("t3", $legendText="T3 - Tier 3 System", $bgColor="#D9F7E6", $borderColor="#B7B5BA", $fontColor="#0D2B1A")
+
+UpdateElementStyle("boundary", $shadowing="true")
+
+' Style
+skinparam RoundCorner 15
+' Change the Font Size
+' skinparam DefaultFontSize 10
+' Change the Font Family Name
+' skinparam DefaultFontName "Open Sans Light"
+' skinparam DefaultFontName "Georgia,serif"
+skinparam DefaultFontName "Helvetica Neue, Helvetica, Arial, sans-serif"
+' Change the definition/size
+skinparam dpi 300
+' Controls the padding surrounding text
+skinparam padding 3
+
+title
+
+<b>Company PlantUML C4 Template</b>
+
+end title   
+
+' System
+Boundary(bdSystem, "SYSTEM REPRESENTATIONS", "") {
+    System(sysT1, "T1 System", "Optional Description", $tags="t1")
+    System(sysT2, "T2 System", "Optional Description", $tags="t2")
+    System(sysT3, "T3 System", "Optional Description", $tags="t3")
+
+    ' System
+    System(sys, "System", "Optional Description", $tags="tag1")
+    SystemDb(sysDB, "Database System", "Optional Description", $tags="tag1")
+    SystemQueue(sysQ, "Queue System", "Optional Description", $tags="tag1")
+    System_Ext(sysExt, "External System", "Optional Description", $tags="tag1")
+    SystemDb_Ext(sysDBExt, "External Database System", "Optional Description", $tags="tag1")
+    SystemQueue_Ext(sysQExt, "External Queue System", "Optional Description", $tags="tag1")
+}
+
+Boundary(bdBoundary, "BOUNDARY REPRESENTATIONS", "") {
+    ' Boundary
+    Boundary(bdDefault, "Custom Boundary", "Custom Boundary") {
+    }
+    Enterprise_Boundary(bdEntDefault, "Enterprise Boundary") {
+    }
+    System_Boundary(bdSysDefault, "System Boundary") {
+    }
+    Container_Boundary(bdCntDefault, "Container Boundary") {
+    }
+}
+
+Boundary(bdPerson, "PERSON REPRESENTATIONS", "") {
+    ' Person
+    Person(per, "Person", "Optional Description")
+    Person_Ext(perExt, "External Person", "Optional Description")
+}
+
+Boundary(dbContainer, "CONTAINER REPRESENTATIONS", "") {
+    ' Container
+    Container(cntDefault, "Container", "technology", "Optional Description")
+    ContainerDb(cntDBDefault, "DB Container", "technology", "Optional Description")
+}
+
+Boundary(dbComponent, "COMPONENT REPRESENTATIONS", "") {
+    ' Component
+    Component(cmpDefault, "Component", "technology", "Optional Description", $tags="tag1")
+    ComponentDb(cmpDBDefault, "DB Component", "technology", "Optional Description", $tags="tag1")
+    ComponentQueue(cmpQDefault, "Queue Component", "technology", "Optional Description", $tags="tag1")
+    Component_Ext(cmpExtDefault, "External Component", "technology", "Optional Description", $tags="tag1")
+    ComponentDb_Ext(cmpDBExtDefault, "External DB Component", "technology", "Optional Description", $tags="tag1")
+    ComponentQueue_Ext(cmpQExtDefault, "External Queue Component", "technology", "Optional Description", $tags="tag1")
+}
+
+Boundary(dbRelatioship, "RELATIONSHIP REPRESENTATIONS", "") {
+
+    ' Relationship
+    Container(cnt1, "C1", "tech")
+    Container(cnt2, "C2", "tech")
+    Container(cnt3, "C3", "tech")
+    Container(cnt4, "C4", "tech")
+    Container(cnt5, "C5", "tech")
+    Container(cnt6, "C6", "tech")
+    Container(cnt7, "C7", "tech")
+    Container(cnt8, "C8", "tech")
+    Container(cnt9, "C9", "tech")
+    Container(cnt10, "C10", "tech")
+    Container(cnt11, "C11", "tech")
+    Container(cnt12, "C12", "tech")
+
+    Rel(cnt1, cnt2, "Rel")
+    Rel_D(cnt2, cnt3, "Rel_D")
+    Rel_Down(cnt3, cnt4, "Rel_Down")
+
+    Rel_Right(cnt4, cnt5, "Rel_Right")
+    Rel_R(cnt5, cnt6, "Rel_R")
+    Rel_Right(cnt6, cnt7, "Rel_Right")
+
+    Rel_Up(cnt7, cnt8, "Rel_Up")
+    Rel_U(cnt8, cnt9, "Rel_U")
+    Rel_Up(cnt9, cnt10, "Rel_Up")
+
+    Rel_Left(cnt10, cnt11, "Rel_Left")
+    Rel_L(cnt11, cnt12, "Rel_L")
+    Rel_Left(cnt12, cnt1, "Rel_Left")
+
+    Container(cnt13, "C13", "tech")
+    Container(cnt14, "C14", "tech")
+    Container(cnt15, "C15", "tech")
+    Container(cnt16, "C16", "tech")
+    Container(cnt17, "C17", "tech")
+    Container(cnt18, "C18", "tech")
+
+    Rel_Back(cnt13, cnt14, "Rel_Back", $techn="tech", $descr="desc")
+    Rel_Neighbor(cnt15, cnt16, "Rel_Neighbor", $techn="tech", $descr="desc")
+    Rel_Back_Neighbor(cnt17, cnt18, "Rel_Back_Neighbor", $techn="tech", $descr="desc")
+
+    Container(cnt19, "C19", "tech")
+    Container(cnt20, "C20", "tech")
+    Container(cnt21, "C21", "tech")
+    Container(cnt22, "C22", "tech")
+    Container(cnt23, "C23", "tech")
+    Container(cnt24, "C24", "tech")
+    Container(cnt25, "C25", "tech")
+    Container(cnt26, "C26", "tech")
+    Container(cnt27, "C27", "tech")
+    Container(cnt28, "C28", "tech")
+    Container(cnt29, "C29", "tech")
+    Container(cnt30, "C30", "tech")
+    Container(cnt31, "C31", "tech")
+    Container(cnt32, "C32", "tech")
+    Container(cnt33, "C33", "tech")
+    Container(cnt34, "C34", "tech")
+    Container(cnt35, "C35", "tech")
+    Container(cnt36, "C36", "tech")
+    Container(cnt37, "C37", "tech")
+
+    BiRel(cnt19, cnt20, "BiRel", $techn="tech", $descr="desc")
+    BiRel_D(cnt21, cnt22, "BiRel_D", $techn="tech", $descr="desc")
+    BiRel_Down(cnt22, cnt23, "BiRel_Down", $techn="tech", $descr="desc")
+    BiRel_U(cnt24, cnt25, "BiRel_U", $techn="tech", $descr="desc")
+    BiRel_Up(cnt26, cnt27, "BiRel_Up", $techn="tech", $descr="desc")
+    BiRel_L(cnt28, cnt29, "BiRel_L", $techn="tech", $descr="desc")
+    BiRel_Left(cnt30, cnt31, "BiRel_Left", $techn="tech", $descr="desc")
+    BiRel_R(cnt32, cnt33, "BiRel_R", $techn="tech", $descr="desc")
+    BiRel_Right(cnt34, cnt35, "BiRel_Right", $techn="tech", $descr="desc")
+    BiRel_Neighbor(cnt36, cnt37, "BiRel_Neighbor", $techn="tech", $descr="desc")
+}
+
+' Layout
+Lay_U(dbComponent, bdPerson)
+Lay_Up(dbComponent, bdPerson)
+
+Lay_R(bdCntDefault, bdBoundary)
+Lay_Right(bdCntDefault, bdBoundary)
+
+Lay_D(bdPerson, dbComponent)
+Lay_Down(bdSystem, dbComponent)
+
+Lay_L(bdEntDefault, bdBoundary)
+Lay_Left(bdPerson, bdBoundary)
+
+' Lay_Distance(bdEntDefault, bdCntDefault, $distance="0")
+
+caption
+
+
+<i>Company</i>
+end caption
+
+footer
+<i>This document is strictly confidential and may not be copied, used, made available or be disclosed to third parties without prior written permission.</i>
+<i>Drawn with PlantUML v. %version() and C4-PlantUML v. C4Version()</i>
+
+end footer
+
+SHOW_LEGEND($hideStereotype="false")
+@enduml
