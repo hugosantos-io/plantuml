@@ -20,6 +20,6 @@ skinparam RoundCorner 15
 ' skinparam DefaultFontName "Georgia,serif"
 skinparam DefaultFontName "Helvetica Neue, Helvetica, Arial, sans-serif"
 ' Change the definition/size
-skinparam dpi 300
+skinparam dpi 150
 ' Controls the padding surrounding text
-skinparam padding 3
+' skinparam padding 3
