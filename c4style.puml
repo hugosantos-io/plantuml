@@ -1,6 +1,16 @@
 ' Documentation: https://github.com/plantuml-stdlib/C4-PlantUML
-' Examples https://github.com/plantuml-stdlib/C4-PlantUML/blob/master/samples/C4CoreDiagrams.md
-' !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4.puml
+' Examples:
+' https://github.com/plantuml-stdlib/C4-PlantUML
+' https://github.com/plantuml-stdlib/C4-PlantUML/blob/master/samples/C4CoreDiagrams.md
+' https://github.com/plantuml-stdlib/C4-PlantUML/blob/master/C4.puml
+' https://github.com/adrianvlupu/C4-Builder
+' https://adrianvlupu.github.io/C4-Builder/#/?id=overview
+' https://kroki.io/examples.html
+' https://crashedmind.github.io/PlantUMLHitchhikersGuide/about/AboutPlantUML.html
+' https://plantuml-documentation.readthedocs.io/en/latest/formatting/all-skin-params.html
+' https://crashedmind.github.io/PlantUMLHitchhikersGuide/layout/layout.html
+' http://www.yosbits.com/wordpress/?page_id=6204
+
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
@@ -12,17 +22,21 @@ AddElementTag("t1", $legendText="T1 - Tier 1 System", $bgColor="#F4CCD2", $borde
 AddElementTag("t2", $legendText="T2 - Tier 2 System", $bgColor="#FDFACE", $borderColor="#B7B5BA", $fontColor="#312E02")
 AddElementTag("t3", $legendText="T3 - Tier 3 System", $bgColor="#D9F7E6", $borderColor="#B7B5BA", $fontColor="#0D2B1A")
 
-UpdateElementStyle("boundary", $shadowing="true")
+' UpdateElementStyle("boundary", $shadowing="true")
 
 ' Style
 skinparam RoundCorner 15
+
 ' Change the Font Size
 ' skinparam DefaultFontSize 10
+
 ' Change the Font Family Name
 ' skinparam DefaultFontName "Open Sans Light"
 ' skinparam DefaultFontName "Georgia,serif"
 skinparam DefaultFontName "Helvetica Neue, Helvetica, Arial, sans-serif"
+
 ' Change the definition/size
 ' skinparam dpi 300
+
 ' Controls the padding surrounding text
 skinparam padding 2
