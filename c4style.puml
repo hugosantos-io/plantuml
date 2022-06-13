@@ -1,3 +1,6 @@
+' Documentation: https://github.com/plantuml-stdlib/C4-PlantUML
+' Examples https://github.com/plantuml-stdlib/C4-PlantUML/blob/master/samples/C4CoreDiagrams.md
+' !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Deployment.puml
@@ -20,6 +23,6 @@ skinparam RoundCorner 15
 ' skinparam DefaultFontName "Georgia,serif"
 skinparam DefaultFontName "Helvetica Neue, Helvetica, Arial, sans-serif"
 ' Change the definition/size
-skinparam dpi 150
+' skinparam dpi 300
 ' Controls the padding surrounding text
-' skinparam padding 3
+skinparam padding 2
