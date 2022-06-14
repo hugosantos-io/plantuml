@@ -12,4 +12,3 @@ footer
 end footer
 
 SHOW_LEGEND($hideStereotype="false")
-@enduml
