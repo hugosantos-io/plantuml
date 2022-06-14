@@ -1,0 +1,15 @@
+
+caption
+
+
+<i>Delivery Hero SE</i>
+end caption
+
+footer
+<i>This document is strictly confidential and may not be copied, used, made available or be disclosed to third parties without prior written permission.</i>
+<i>Drawn with PlantUML v. %version() and C4-PlantUML v. C4Version()</i>
+
+end footer
+
+SHOW_LEGEND($hideStereotype="false")
+@enduml
